@@ -5,11 +5,11 @@ def is_even(n):
         return False  # Changed "false" (string) to False (boolean)
 
 def sum_even(start, end):
-    sum = 0
-    for i in range(start, end):  
-        if is_even(i):  # Function correctly returns boolean
-            sum += i
-    return sum
+    ttl = 0  #Changed 'sum' to 'ttl' to avoid conflict with built-in function
+    for i in range(start, end + 1):  # Include 'end' in the range
+        if is_even(i):
+            ttl += i
+    return ttl
 
 try:
     start = int(input("Enter the start number: "))  
